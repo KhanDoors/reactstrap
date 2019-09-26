@@ -11,7 +11,7 @@ const ContactForm = () => {
       setContact(current);
     } else {
       setContact({
-        name: "",
+        firstname: "",
         lastname: "",
         systemrole: "",
         organization: ""
@@ -20,13 +20,13 @@ const ContactForm = () => {
   }, [contactContext, current]);
 
   const [contact, setContact] = useState({
-    name: "",
+    firstname: "",
     lastname: "",
     systemrole: "",
     organization: ""
   });
 
-  const { name, lastname, systemrole, organization } = contact;
+  const { firstname, lastname, systemrole, organization } = contact;
 
   const onChange = e =>
     setContact({ ...contact, [e.target.name]: e.target.value });
@@ -39,66 +39,22 @@ const ContactForm = () => {
       updateContact(contact);
     }
     setContact({
-      name: "",
+      firstname: "",
       lastname: "",
       systemrole: "",
-      organization: "personal"
+      organization: ""
     });
   };
 
   return (
-    // <form onSubmit={onSubmit}>
-    //   <h2 className="text-primary mx-5">
-    //     {current ? "Edit Contact" : "Add User"}
-    //   </h2>
-    //   <input
-    //     type="text"
-    //     placeholder="Name"
-    //     name="name"
-    //     value={name}
-    //     onChange={onChange}
-    //     className="mx-1"
-    //   />
-    //   <input
-    //     type="email"
-    //     placeholder="Email"
-    //     name="email"
-    //     value={email}
-    //     onChange={onChange}
-    //     className="mx-1"
-    //   />
-    //   <input
-    //     type="text"
-    //     placeholder="Phone"
-    //     name="phone"
-    //     value={phone}
-    //     onChange={onChange}
-    //     className="mx-1"
-    //   />
-
-    //   <div className="mx-5">
-    //     <input
-    //       type="submit"
-    //       value={current ? "Update Contact" : "Add User"}
-    //       className="btn btn-primary mx-5"
-    //     />
-    //   </div>
-    //   {current && (
-    //     <div className=" mx-5">
-    //       <button className="btn btn-light btn-block mx-5" onClick={clearAll}>
-    //         Clear
-    //       </button>
-    //     </div>
-    //   )}
-    // </form>
     <form onSubmit={onSubmit}>
       <div className="form-group">
         <h2 className="text-primary mx-5">Add User </h2>
         <input
           type="text"
           placeholder="FirstName"
-          name="name"
-          value={name}
+          name="firstname"
+          value={firstname}
           onChange={onChange}
           className="mx-1"
         />

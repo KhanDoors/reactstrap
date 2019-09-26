@@ -31,10 +31,59 @@ const ContactState = props => {
       },
       {
         id: 3,
-        firstname: "Steve",
-        lastname: "Porter",
+        firstname: "Bridget",
+        lastname: "Omo-Ekpadi",
+        systemrole: "Edit",
+        organization: "DSCA"
+      },
+      {
+        id: 4,
+        firstname: "Alex",
+        lastname: "Jones",
+        systemrole: "Edit",
+        organization: "AC"
+      },
+      {
+        id: 5,
+        firstname: "Jacob",
+        lastname: "Fraher",
+        systemrole: "Configure",
+        organization: "EC"
+      },
+      {
+        id: 6,
+        firstname: "James",
+        lastname: "Hildebrand",
+        systemrole: "View",
+        organization: "MILDEP"
+      },
+      {
+        id: 7,
+        firstname: "Eva",
+        lastname: "Sachar",
+        systemrole: "Edit",
+        organization: "EC"
+      },
+      {
+        id: 8,
+        firstname: "Marie",
+        lastname: "Edozie",
+        systemrole: "Administrator",
+        organization: "DSCA"
+      },
+      {
+        id: 9,
+        firstname: "Adrian",
+        lastname: "Meyers",
         systemrole: "Edit",
         organization: "MILDEP"
+      },
+      {
+        id: 10,
+        firstname: "Steve",
+        lastname: "Porter",
+        systemrole: "Configure",
+        organization: "DSCA"
       }
     ],
     current: null,
