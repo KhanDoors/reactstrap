@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import ContactContext from "../../context/contact/contactContext";
-
 import { Link } from "react-router-dom";
 
 const ContactFilter = () => {
@@ -28,7 +27,7 @@ const ContactFilter = () => {
         />
       </form>
       <div>
-        <button type="button" className="btn btn-light mx-5">
+        <button type="button" className="btn btn-outline-primary mx-5">
           <Link to="/ContactForm">Add User</Link>
         </button>
       </div>
