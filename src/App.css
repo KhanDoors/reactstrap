@@ -16,6 +16,10 @@ input {
   margin: 1.2rem 0;
 }
 
+.container-filter {
+  display: flex;
+}
+
 .sidebar {
   width: 130px;
   position: fixed;
@@ -96,9 +100,19 @@ h3 {
   text-align: center;
 }
 
+.table-striped {
+  height: 40vh;
+}
+
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.dropdown {
+  top: 0;
+  position: relative;
+  margin-top: -1px;
 }
 
 .form .form-group {
