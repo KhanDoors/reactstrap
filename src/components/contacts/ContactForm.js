@@ -4,7 +4,7 @@ import ContactContext from "../../context/contact/contactContext";
 const ContactForm = () => {
   const contactContext = useContext(ContactContext);
 
-  const { addContact, clearCurrent, updateContact, current } = contactContext;
+  const { addContact, updateContact, current } = contactContext;
 
   useEffect(() => {
     if (current !== null) {
@@ -12,21 +12,21 @@ const ContactForm = () => {
     } else {
       setContact({
         name: "",
-        email: "",
-        phone: "",
-        type: "personal"
+        lastname: "",
+        systemrole: "",
+        organization: ""
       });
     }
   }, [contactContext, current]);
 
   const [contact, setContact] = useState({
     name: "",
-    email: "",
-    phone: "",
-    type: "personal"
+    lastname: "",
+    systemrole: "",
+    organization: ""
   });
 
-  const { name, email, phone, type } = contact;
+  const { name, lastname, systemrole, organization } = contact;
 
   const onChange = e =>
     setContact({ ...contact, [e.target.name]: e.target.value });
@@ -40,73 +40,96 @@ const ContactForm = () => {
     }
     setContact({
       name: "",
-      email: "",
-      phone: "",
-      type: "personal"
+      lastname: "",
+      systemrole: "",
+      organization: "personal"
     });
   };
 
-  const clearAll = () => {
-    clearCurrent();
-  };
-
   return (
-    <form className="mx-2" onSubmit={onSubmit}>
-      <h2 className="text-primary">
-        {current ? "Edit Contact" : "Add Contact"}
-      </h2>
-      <input
-        type="text"
-        placeholder="Name"
-        name="name"
-        value={name}
-        onChange={onChange}
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        name="email"
-        value={email}
-        onChange={onChange}
-      />
-      <input
-        type="text"
-        placeholder="Phone"
-        name="phone"
-        value={phone}
-        onChange={onChange}
-      />
-      <h5>Contact Type</h5>
-      <input
-        type="radio"
-        name="type"
-        value="personal"
-        checked={type === "personal"}
-        onChange={onChange}
-      />{" "}
-      Personal
-      <input
-        type="radio"
-        name="type"
-        value="professional"
-        checked={type === "professional"}
-        onChange={onChange}
-      />
-      Professional
-      <div>
+    // <form onSubmit={onSubmit}>
+    //   <h2 className="text-primary mx-5">
+    //     {current ? "Edit Contact" : "Add User"}
+    //   </h2>
+    //   <input
+    //     type="text"
+    //     placeholder="Name"
+    //     name="name"
+    //     value={name}
+    //     onChange={onChange}
+    //     className="mx-1"
+    //   />
+    //   <input
+    //     type="email"
+    //     placeholder="Email"
+    //     name="email"
+    //     value={email}
+    //     onChange={onChange}
+    //     className="mx-1"
+    //   />
+    //   <input
+    //     type="text"
+    //     placeholder="Phone"
+    //     name="phone"
+    //     value={phone}
+    //     onChange={onChange}
+    //     className="mx-1"
+    //   />
+
+    //   <div className="mx-5">
+    //     <input
+    //       type="submit"
+    //       value={current ? "Update Contact" : "Add User"}
+    //       className="btn btn-primary mx-5"
+    //     />
+    //   </div>
+    //   {current && (
+    //     <div className=" mx-5">
+    //       <button className="btn btn-light btn-block mx-5" onClick={clearAll}>
+    //         Clear
+    //       </button>
+    //     </div>
+    //   )}
+    // </form>
+    <form onSubmit={onSubmit}>
+      <div className="form-group">
+        <h2 className="text-primary mx-5">Add User </h2>
         <input
-          type="submit"
-          value={current ? "Update Contact" : "Add Contact"}
-          className="btn btn-primary btn-block"
+          type="text"
+          placeholder="FirstName"
+          name="name"
+          value={name}
+          onChange={onChange}
+          className="mx-1"
         />
-      </div>
-      {current && (
+        <input
+          type="text"
+          placeholder="LastName"
+          name="lastname"
+          value={lastname}
+          onChange={onChange}
+          className="mx-1"
+        />
+        <input
+          type="text"
+          placeholder="System Role"
+          name="systemrole"
+          value={systemrole}
+          onChange={onChange}
+          className="mx-1"
+        />
+        <input
+          type="text"
+          placeholder="Organization"
+          name="organization"
+          value={organization}
+          onChange={onChange}
+          className="mx-1"
+        />
         <div>
-          <button className="btn btn-light btn-block" onClick={clearAll}>
-            Clear
-          </button>
+          <input type="submit" value="Submit" className="btn btn-primary" />
         </div>
-      )}
+      </div>
     </form>
   );
 };

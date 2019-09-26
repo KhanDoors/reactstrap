@@ -17,24 +17,24 @@ const ContactState = props => {
     contacts: [
       {
         id: 1,
-        name: "troy aikman",
-        email: "troy@cowboys.com",
-        phone: "212-555-1212",
-        type: "personal"
+        firstname: "Jared ",
+        lastname: "Plotkin",
+        systemrole: "Edit",
+        organization: "DSCA"
       },
       {
         id: 2,
-        name: "steve jones",
-        email: "steve@cowboys.com",
-        phone: "212-555-1213",
-        type: "personal"
+        firstname: "Michael ",
+        lastname: "Jordan",
+        systemrole: "Configure",
+        organization: "DSCA"
       },
       {
         id: 3,
-        name: "john Smith",
-        email: "john@cowboys.com",
-        phone: "212-555-1214",
-        type: "professional"
+        firstname: "Steve",
+        lastname: "Porter",
+        systemrole: "Edit",
+        organization: "MILDEP"
       }
     ],
     current: null,
