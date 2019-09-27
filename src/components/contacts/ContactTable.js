@@ -16,12 +16,15 @@ const ContactTable = ({ contact }) => {
       <td>{lastname}</td>
       <td>{systemrole}</td>
       <td>{organization}</td>
-      <UncontrolledButtonDropdown className="dropdown m-1">
+      <UncontrolledButtonDropdown
+        className="dropdown m-2"
+        data-display="static"
+      >
         <DropdownToggle caret>Action</DropdownToggle>
         <DropdownMenu right>
-          <DropdownItem header>Trigger</DropdownItem>
-          <DropdownItem disabled>Feedback</DropdownItem>
-          <DropdownItem>Rules</DropdownItem>
+          <DropdownItem>Disable</DropdownItem>
+          <DropdownItem>Update</DropdownItem>
+          <DropdownItem>Delete</DropdownItem>
         </DropdownMenu>
       </UncontrolledButtonDropdown>
     </tr>

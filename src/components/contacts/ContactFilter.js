@@ -27,7 +27,7 @@ const ContactFilter = () => {
         />
       </form>
       <div>
-        <button type="button" className="btn btn-outline-primary mx-5">
+        <button type="button" className="btn btn-sm btn-outline-primary m-2">
           <Link to="/ContactForm">Add User</Link>
         </button>
       </div>
