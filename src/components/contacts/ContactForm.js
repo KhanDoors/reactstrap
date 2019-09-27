@@ -44,6 +44,7 @@ const ContactForm = props => {
       systemrole: "",
       organization: ""
     });
+    props.history.push("/");
   };
 
   return (
