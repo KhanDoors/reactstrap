@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
   UncontrolledButtonDropdown
 } from "reactstrap";
+import ContactContext from "../../context/contact/contactContext";
 
 const ContactTable = ({ contact }) => {
+  const contactContext = useContext(ContactContext);
+
+  const { deleteContact } = contactContext;
+
   const { id, firstname, lastname, systemrole, organization } = contact;
+
+  const onDelete = () => {
+    deleteContact(id);
+  };
 
   return (
     <tr>
@@ -24,7 +33,7 @@ const ContactTable = ({ contact }) => {
         <DropdownMenu right>
           <DropdownItem>Disable</DropdownItem>
           <DropdownItem>Update</DropdownItem>
-          <DropdownItem>Delete</DropdownItem>
+          <DropdownItem onClick={onDelete}>Delete</DropdownItem>
         </DropdownMenu>
       </UncontrolledButtonDropdown>
     </tr>

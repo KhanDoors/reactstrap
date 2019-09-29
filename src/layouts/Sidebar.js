@@ -36,28 +36,28 @@ const Sidebar = () => {
         </NavItem>
         <NavItem>
           <NavLink href="#">
-            <Link to="/Register">
+            <Link to="/Map">
               <i class="fas fa-address-card"> Map View </i>
             </Link>
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="#">
-            <Link to="/Login">
+            <Link to="/Map">
               <i class="fas fa-address-card"> Reports </i>
             </Link>
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="#">
-            <Link to="/Register">
+            <Link to="/Map">
               <i class="fas fa-address-card"> Workflow </i>
             </Link>
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="#">
-            <Link to="/Register">
+            <Link to="/Map">
               <i class="fas fa-address-card"> Test </i>
             </Link>
           </NavLink>

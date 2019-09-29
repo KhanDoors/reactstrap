@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ContactContext from "../../context/contact/contactContext";
 import { Link } from "react-router-dom";
+import ContactPagination from "./ContactPagination";
 
 const ContactFilter = () => {
   const contactContext = useContext(ContactContext); //app level state
@@ -30,6 +31,9 @@ const ContactFilter = () => {
         <button type="button" className="btn btn-sm btn-outline-primary m-2">
           <Link to="/ContactForm">Add User</Link>
         </button>
+      </div>
+      <div>
+        <ContactPagination />
       </div>
     </div>
   );
